@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #000;
+  color: gold;
+  padding: 1.5em;
+  text-align: center;
+}
+
+section {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 1.5em;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: gold;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #d4af37;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #000;
+  color: #fff;
+}
+
