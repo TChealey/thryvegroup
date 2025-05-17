@@ -1,3 +1,26 @@
+
+/* Navigation bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 1em 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* General page layout */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,56 +30,53 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background-color: #000;
-  color: gold;
-  padding: 1.5em;
-  text-align: center;
-}
-
-section {
+main {
   padding: 2em;
-  max-width: 900px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-ul {
-  list-style-type: square;
-  margin-left: 1.5em;
+/* Services section layout */
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 2em;
+  align-items: flex-start;
 }
 
-form {
-  background-color: #f9f9f9;
-  padding: 1em;
-  border-radius: 5px;
-  margin-top: 1em;
+.service-list {
+  flex: 1;
+  min-width: 300px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 0.75em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.service-list ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-button {
-  background-color: gold;
-  border: none;
-  padding: 0.75em 1.5em;
+.service-list li {
+  margin-bottom: 0.75em;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.service-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: green;
   font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
-button:hover {
-  background-color: #d4af37;
+.service-image {
+  flex: 1;
+  min-width: 300px;
 }
 
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #000;
-  color: #fff;
+.service-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
 }
 

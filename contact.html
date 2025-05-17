@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-icons {
+      text-align: center;
+      margin-bottom: 2em;
+      font-size: 1.1em;
+    }
+
+    .contact-icons p {
+      margin: 0.5em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+    }
+
+    .contact-icons span {
+      font-size: 1.3em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main style="max-width: 700px; margin: 3em auto; padding: 1em;">
+    <!-- Logo -->
+    <div style="text-align: center;">
+      <img src="images/logo.png" alt="Company Logo" style="max-width: 200px; margin-bottom: 1em;" />
+    </div>
+
+    <h1 style="text-align: center;">Contact Us</h1>
+    <p style="text-align: center;">Have questions or ready to work with us? Send us a message!</p>
+
+    <!-- Contact Info with Icons -->
+    <div class="contact-icons">
+      <p><span>📞</span> 980-224-0162</p>
+      <p><span>📧</span> thryvegroup@icloud.com</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/yourformid" method="POST" style="display: flex; flex-direction: column; gap: 1em;">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required style="padding: 0.5em; font-size: 1em;">
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required style="padding: 0.5em; font-size: 1em;">
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required style="padding: 0.5em; font-size: 1em;"></textarea>
+
+      <input type="hidden" name="_next" value="https://thryvegroup.biz/thank-you.html" />
+
+      <button type="submit" style="padding: 0.75em; background-color: black; color: gold; font-weight: bold; font-size: 1em; border: none; border-radius: 5px; cursor: pointer;">
+        Send Message
+      </button>
+    </form>
+  </main>
+
+</body>
+
+<footer style="text-align: center; padding: 1em 0; background-color: #000; color: gold; font-size: 0.9em;">
+  &copy; 2025 Thryve Group LLLP. All rights reserved.
+</footer>
+</html>
+

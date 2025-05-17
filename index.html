@@ -3,67 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thryve Group LLLP</title>
+  <title>Our Services</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      margin-top: 2em;
+      justify-content: space-between;
+    }
+
+    .service-list {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .service-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .service-list li {
+      margin-bottom: 0.75em;
+      padding-left: 1.5em;
+      position: relative;
+    }
+
+    .service-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+      font-weight: bold;
+    }
+
+    .service-image {
+      flex: 1;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .service-image img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .motto {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 2em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Thryve Group LLLP</h1>
-    <p>Protecting and Restoring Properties with Integrity</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>Thryve Group LLLP is based in Charlotte, NC with 27+ years of experience in handyman work, property preservation, and renovation.</p>
-  </section>
-
-  <section>
-    <h2>Our Vision</h2>
-    <p>To be the go-to provider of trusted, reliable, and high-quality property preservation services.</p>
-  </section>
-
-  <section>
-    <h2>Our Mission</h2>
-    <p>We provide exceptional services with professionalism, reliability, and craftsmanship that improve lives and maintain property value.</p>
-  </section>
-
-  <section>
-    <h2>Our Services</h2>
+  <!-- Navigation Menu -->
+  <nav>
     <ul>
-      <li>Process Serving</li>
-      <li>Routine & Turnkey Cleaning</li>
-      <li>Landscaping</li>
-      <li>Light Electrical / Plumbing</li>
-      <li>Drywall, Flooring, Punchouts</li>
-      <li>Appliance Install/Removal</li>
-      <li>Junk Removal / Evictions</li>
-      <li>Winterization & Snow Removal</li>
-      <li>Tree Trimming / Pressure Washing</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <section>
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> <a href="tel:9802240162">980-224-0162</a><br />
-    <strong>Email:</strong> <a href="mailto:thryvegroup@icloud.com">thryvegroup@icloud.com</a></p>
+  <main style="max-width: 1200px; margin: 3em auto; padding: 1em;">
+    <!-- Logo + Motto -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Company Logo" style="max-width: 200px;" />
+    </div>
+    <p class="motto">Protecting and Restoring Properties with Integrity</p>
 
-    <form action="https://formspree.io/f/your_form_id" method="POST">
-      <label for="name">Name:</label><br />
-      <input type="text" name="name" id="name" required /><br /><br />
+    <h1 style="text-align: center;">Our Services</h1>
+    <p style="text-align: center;">
+      We proudly offer a variety of services to meet your property preservation needs:
+    </p>
 
-      <label for="email">Email:</label><br />
-      <input type="email" name="email" id="email" required /><br /><br />
+    <!-- Three-Column Layout -->
+    <div class="services-wrapper">
+      <!-- Left Column: Checkmark List -->
+      <div class="service-list">
+        <ul>
+          <li>Routine and Turnkey Cleaning</li>
+          <li>Landscaping and Lawn Maintenance</li>
+          <li>Light Electrical and Plumbing</li>
+          <li>Drywall Repair and Installation</li>
+          <li>Appliance Installation and Removal</li>
+          <li>Junk Removal and Eviction Support</li>
+          <li>Winterization and Snow Removal</li>
+          <li>Tree Trimming and Pruning</li>
+          <li>Pressure Washing</li>
+        </ul>
+      </div>
 
-      <label for="message">Message:</label><br />
-      <textarea name="message" id="message" rows="5" required></textarea><br /><br />
+      <!-- Middle Column: Junk Removal Logo -->
+      <div class="service-image">
+        <img src="images/junk_removal_logo.png" alt="Junk Removal Logo" />
+      </div>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+      <!-- Right Column: Cleaning Logo -->
+      <div class="service-image">
+        <img src="images/Thryve_Group_LLLP_LogoCleaning.png" alt="Cleaning Logo" />
+      </div>
+    </div>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Thryve Group LLLP | All rights reserved</p>
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 1em 0; background-color: #000; color: gold; font-size: 0.9em;">
+    &copy; 2025 Thryve Group LLLP. All rights reserved.
   </footer>
+
 </body>
 </html>
 
