@@ -6,28 +6,69 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .contact-icons {
+    .contact-section {
+      max-width: 700px;
+      margin: 3em auto;
+      padding: 1em;
+    }
+
+    .contact-section h1,
+    .contact-section p {
       text-align: center;
-      margin-bottom: 2em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 2em;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 0.5em;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 0.75em;
+      background-color: black;
+      color: gold;
+      font-weight: bold;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .logo img {
+      max-width: 200px;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin: 1em 0;
       font-size: 1.1em;
     }
 
-    .contact-icons p {
+    .contact-info p {
       margin: 0.5em 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5em;
-    }
-
-    .contact-icons span {
-      font-size: 1.3em;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -38,44 +79,42 @@
     </ul>
   </nav>
 
-  <main style="max-width: 700px; margin: 3em auto; padding: 1em;">
+  <main class="contact-section">
     <!-- Logo -->
-    <div style="text-align: center;">
-      <img src="images/logo.png" alt="Company Logo" style="max-width: 200px; margin-bottom: 1em;" />
+    <div class="logo">
+      <img src="images/logo.png" alt="Thryve Group Logo">
     </div>
 
-    <h1 style="text-align: center;">Contact Us</h1>
-    <p style="text-align: center;">Have questions or ready to work with us? Send us a message!</p>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Use the form below or reach out directly.</p>
 
-    <!-- Contact Info with Icons -->
-    <div class="contact-icons">
-      <p><span>📞</span> 424-403-1139</p>
-      <p><span>📧</span> thryvegroup@icloud.com</p>
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><strong>📞 Phone:</strong> 980-224-0162</p>
+      <p><strong>📧 Email:</strong> thryvegroup@icloud.com</p>
     </div>
 
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/mkgreopv" method="POST" style="display: flex; flex-direction: column; gap: 1em;">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required style="padding: 0.5em; font-size: 1em;">
+    <!-- Contact Form via Formspree -->
+    <form action="https://formspree.io/f/mkgreopv" method="POST">
+      <label>
+        Your Email:
+        <input type="email" name="email" required>
+      </label>
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required style="padding: 0.5em; font-size: 1em;">
+      <label>
+        Your Message:
+        <textarea name="message" rows="5" required></textarea>
+      </label>
 
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" required style="padding: 0.5em; font-size: 1em;"></textarea>
-
-      <input type="hidden" name="_next" value="https://thryvegroup.biz/thank-you.html" />
-
-      <button type="submit" style="padding: 0.75em; background-color: black; color: gold; font-weight: bold; font-size: 1em; border: none; border-radius: 5px; cursor: pointer;">
-        Send Message
-      </button>
+      <button type="submit">Send</button>
     </form>
   </main>
 
-</body>
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 1em 0; background-color: #000; color: gold; font-size: 0.9em;">
+    &copy; 2025 Thryve Group LLLP. All rights reserved.
+  </footer>
 
-<footer style="text-align: center; padding: 1em 0; background-color: #000; color: gold; font-size: 0.9em;">
-  &copy; 2025 Thryve Group LLLP. All rights reserved.
-</footer>
+</body>
 </html>
 
