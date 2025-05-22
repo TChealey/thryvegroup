@@ -14,30 +14,6 @@
       justify-content: space-between;
     }
 
-    .service-list {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .service-list ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .service-list li {
-      margin-bottom: 0.75em;
-      padding-left: 1.5em;
-      position: relative;
-    }
-
-    .service-list li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: green;
-      font-weight: bold;
-    }
-
     .service-image {
       flex: 1;
       min-width: 280px;
@@ -100,6 +76,14 @@
       margin-top: 1em;
       font-weight: bold;
     }
+
+    footer {
+      text-align: center;
+      padding: 1em 0;
+      background-color: #000;
+      color: gold;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
@@ -135,34 +119,33 @@
       </div>
     </div>
 
-    <!-- Contact Form -->
+    <!-- Contact Form Section -->
     <section style="margin-top: 4em;">
       <h2 style="text-align: center;">Get a Quote or Ask a Question</h2>
       <form id="contactForm">
-  <label>
-    Your Name:
-    <input type="text" name="name" required />
-  </label>
-  <label>
-    Your Email:
-    <input type="email" name="email" required />
-  </label>
-  <label>
-    Your Message:
-    <textarea name="message" rows="5" required></textarea>
-  </label>
-  <button type="submit">Send</button>
-</form>
-<p id="responseMessage"></p>
-   </section>
+        <label>
+          Your Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Your Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Your Message:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+      <p id="responseMessage"></p>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer style="text-align: center; padding: 1em 0; background-color: #000; color: gold; font-size: 0.9em;">
+  <footer>
     &copy; 2025 Thryve Group LLLP. All rights reserved.
   </footer>
 
-  <!-- Zapier Script -->
+  <!-- Zapier Webhook Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("contactForm");
@@ -176,5 +159,31 @@
           message: form.message.value
         };
 
-        fetch("https://
+        fetch("https://hooks.zapier.com/hooks/catch/23031040/2jbhnmx/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+          .then(res => {
+            if (res.ok) {
+              document.getElementById("responseMessage").textContent =
+                "✅ Thank you! We'll be in touch.";
+              form.reset();
+            } else {
+              document.getElementById("responseMessage").textContent =
+                "⚠️ There was a problem submitting the form.";
+            }
+          })
+          .catch(() => {
+            document.getElementById("responseMessage").textContent =
+              "⚠️ Failed to send. Please try again.";
+          });
+      });
+    });
+  </script>
+
+</body>
+</html>
 
