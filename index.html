@@ -147,42 +147,42 @@
 
   <!-- Zapier Webhook Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
+   document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const data = {
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value
-        };
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
 
-        fetch("https://hooks.zapier.com/hooks/catch/23031040/2jbhnmx/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        })
-          .then(res => {
-            if (res.ok) {
-              document.getElementById("responseMessage").textContent =
-                "✅ Thank you! We'll be in touch.";
-              form.reset();
-            } else {
-              document.getElementById("responseMessage").textContent =
-                "⚠️ There was a problem submitting the form.";
-            }
-          })
-          .catch(() => {
-            document.getElementById("responseMessage").textContent =
-              "⚠️ Failed to send. Please try again.";
-          });
-      });
+    fetch("https://hooks.zapier.com/hooks/catch/23031040/2jbhnmx/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => {
+      if (res.ok) {
+        document.getElementById("responseMessage").textContent =
+          "✅ Thank you! We'll be in touch.";
+        form.reset();
+      } else {
+        document.getElementById("responseMessage").textContent =
+          "⚠️ There was a problem submitting the form.";
+      }
+    })
+    .catch(() => {
+      document.getElementById("responseMessage").textContent =
+        "⚠️ Failed to send. Please try again.";
     });
-  </script>
+  });
+});
+          </script>
 
 </body>
 </html>
