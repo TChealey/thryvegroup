@@ -4,79 +4,53 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Junk Removal Pricing | Thryve Group LLLP</title>
-  <meta name="description" content="Fair, affordable, transparent junk removal pricing in Charlotte, NC and surronding counties. Load-based and item-specific prices with no hidden fees." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href=:https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --tg-gold:#f5c400;
-    --tg-black:#111111;
-    --tg-gray:#6b7280;
-    --tg-bg:#0b0b0b;
-    --card-bg:#ffffff;
-    --border:#e5e7eb;
-    --accent:#0ea5e9;
-  }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111}
-body{background:#fafafa}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-header.hero{background:linear-gradient(180deg,#fff, #f9fafb);border-bottom:1px solid var(--border)}
-.hero .container{padding-top:34px;padding-bottom:34px}
-.eyebrow{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--tg-gray);font-size:.78rem}
-h1{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:.25rem 0 0 0;line-height:1.15}
-.tagline{margin:.5rem 0 0 0;color:var(--tg-black);font-weight:600}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.badge{border:1px dashed var(--tg-black);padding:6px 10px;border-radius:999px;font-size:.85rem;background:#fff}
-section{margin-top:36px}
-h2{font-size:1.25rem;margin:0 0 10px 0}
-p{margin:0 0 12px 0;color:#1f2937}
-.grid{display:grid;gap:16px}
-@media (min-width:640px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-.card{background:var(--card-bg);boarder:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.card h3{margin:0 0 8px 0;font-size:1.1rem}
-.muted{color:var(--tg-gray);font-size:.95rem}
-.meter{height:10px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin-top:10px;border:1px solid var (--border)}
-.meter > span{display:block;height:100%;background:linear-gradient(90deg,var(--tg-gold),#ffd84d);width:25%}
-.price{font-size:1.35rem;font-weight:700;margin-top:4px}
-.disclaimer{font-size:.9rem;color:#4b5563}
-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff}
-th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var (--border)}
-th{background:#f9fafb;font-weight:700}
-tr:last-child td{border-bottom:none}
-.cta{background:#111;color:#fff;border-radius:16px;padding:18px;display:flex;flex-wrap;gap:10px;align-items:center;justify-content:space-between}
-.cta strong{color:var(--tg-gold)}
-.cta a.btn{display:inline-block;border-radius:999px;background:var(--tg-gold);color:#111;padding:10px 16px;font-weight:700;text-decoration:none;border:2px solid #000}
-.checks{display:grid;gap:8px}
-@media (min-width:700px){.checks{grid-template-columns:repeat(2,1fr)}}
-.check{display:flex;gap:8px;align-items:flex-start}
-.check .dot{margin-top:6px;width:8px;height:8px;background:var(--tg-gold);border-radius:999px;box-shadow:0 0 0 2px #111 inset}
-footer{margin:36px 0;color:#6b7280;font-size:.95rem}
-.sr-only{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}
+  <style>
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:#fafafa;color:#111}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header.hero{background:#fff;border-bottom:1px solid #e5e7eb;padding:20px}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#6b7280;font-size:.78rem}
+    h1{font-size:2rem;margin:.25rem 0 0 0;line-height:1.15}
+    .tagline{margin:.5rem 0 0 0;color:#111;font-weight:600}
+    .badges{display:flex;flex-wrap:wrap:wrap;gap:8px;margin-top:12px}
+    .badge{border:1px dashed #111;padding:6px 10px;border-radius:999px;font-size:.85rem;background:#fff}
+   
+    nav ul{list-style:none;display:flex;gap:24px;margin:20px 0 0 0;padding:0;justify-content:center}
+    nav a{text-decoration:none;font-weight:600;color:#111;padding:6px 10px;border-radius:8px;transition:all .2s}
+    nav a:hover{background:#f5c400;color:#111}
+    nav a.active{background:#111;color:#fff}
+
+    .grid{display:grid;gap:16px}
+    @media (min-width:640px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+    @media (mind-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .card h3{margin:0 0 8px 0;font-size:1.1rem}
+    .price{display:block;font-size:1.35rem;font-weight:700;margin:0;position:relative;z-index:1}
+    .muted{color:#6b7280;font-size:.95rem}
+    .meter{height:10px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:10px 0 12px;border:1px solid #e5e7eb;position:relative;z-index:0}
+    .meter > span{display:block;height:100%;background:linear-gradient(90deg,#f5c400,#ffd84d;width:0;}
+    footer{margin:36px 0;text-align:center;color:#6b7280;font-size:.9rem}
    </style>
 </head>
 <body>
   <header class="hero">
     <div class="container">
       <div class="eyebrow">Junk Removal Pricing - Thryve Group LLLP</div>
-      <h1>Fair <span aria-hidden="true">*</span> Affordable <span aria-hidden="true">*</span> Transparent</h1>
+      <h1>Fair * Affordable * Transparent</h1>
       <p class="tagline">At Thryve Group LLLP, we believe in making junk removal simple and affordable for Charlotte, NC. Our prices are set lower than the big-name competitors while still giving you professional, reliable service. No hidden fees, no surprises - just honest work at the best value in town.</p>
-      <div class="badges" aria-hidden="true">
+      <div class="badges">
 	<span class="badge">Licensed & Insured</span>
 	<span class="badge">Charlotte * Mecklenburg * Gaston * Cabarrus</span>
 	<span class="badge">Same/Next-Day Service</span>
       </div>
 
       <nav>
-	<ul style="list-style:none; display:flex; gap:20px; margin-top:20px; padding:0;">
           <li><a href="index.html">Home</a></li>
 	  <li><a href="about.html">About</a></li>
 	  <li><a href="services.html">Services</a></li>
-	  <li><a href="pricing.html">Pricing</a></li>
+	  <li><a href="pricing.html" class="active">>Pricing</a></li>
 	  <li><a href="contact.html">Contact</a></li>
-	</ul>
+	  <li class=\"nav-cta\"><a href=\"https:\/\/junk.thryvegroup.biz\"btn-cta\">Get a Quote<\/a><\/li>
+	<\/ul>
       </nav>
 
    </div>
@@ -94,48 +68,43 @@ footer{margin:36px 0;color:#6b7280;font-size:.95rem}
 	 <p class="muted">Good for a few items or small closet cleanout.</p>
        </article>
 
-       <article class="card" role=listitem">
+       <article class="card">
 	 <h3>1/4 Trailer * ~4-4.5 cu yd</h3>
-         <div class="meter" aria-hidden="true"><span style="width:25%></span></div>
+	 <div class="meter"><span style="width:25%"></span></div>
 	 <div class="price">$155</div>
-	 <p class="muted">Great for small furniture or a few bulky item.</p>
+	 <p class="muted">Great for small furniture or a few bulky items.</p>
        </article>
 
-       <article class="card" role="listitem">
-         <h3>3/8 Trailer * ~6-6.6 cu yd</h3>
-	 <div class="meter" aria-hidden="true"><span style="width:37.5%"></span></div>
-	 <div class="price">$155</div>
-         <div class="muted">Great for small furniture or a few bulky items.</p>
+       <article class="card">
+	 <h3>3/8 Trailer * ~6-6.6 cu yd</h3>
+	 <div class="meter"><span style="width:37.5%"></span></div>
+	 <div class="price">$230</div>
+	 <p class="muted">Good for apartment-size cleanouts.</p>
        </article>
 
-       <article class="card" role="listitem">
+       <article class="card">
 	 <h3>1/2 Trailer * ~8-9 cu yd</h3>
-         <div class="meter" aria-hidden="true"><span style="width:50%></span></div>
-         <div class="price">$300</div>
+	 <div class="meter"><span style="width:50%"></span></div>
 	 <p class="muted">Perfect for room cleanouts or renovation debris.</p>
        </article>
 
-       <article class="card" role="listitem">
+       <article class="card">
 	 <h3>5/8 Trailer * ~11 cu yd</h3>
-	 <div class="meter" aria-hidden="true"><span style="width:62.5%"></span></div>
+	 <div class="meter"><span style="width:62.5%"></span></div>
 	 <div class="price">$380</div>
 	 <p class="muted">Multiple bulky items or mid-sized projects.</p>
-       </article>
 
-       <article class="card" role="listitem">
+       <article class="card">
 	 <h3>3/4 Trailer * ~13 cu yd</h3>
-	 <div class="meter" aria-hidden="true"><span style="width:75%></span></div>
+	 <div class="meter"><span style="width:75%"></span></div>
 	 <div class="price">$475</div>
 	 <p class="muted">Garage or attic cleanouts.</p>
-	</article>
-
-       <article class="card" role="listitem">
-	 <h3>Full Trailer * ~17 cu yd</h3>
-	 <div class="meter" aria-hidden="true"><span sytle="width:100%"></span></div>
-	 <div class="price">$565</div>
-	 <p class="muted">Whole-home or yard overhaul projects.</p>
        </article>
 
+       <article class="card">
+	 <h3>Full Trailer * ~17 cu yd</h3>
+	 <div class="meter"><span style="width:100%"></span></div>
+       </article>
      </div>
    </section>
 
