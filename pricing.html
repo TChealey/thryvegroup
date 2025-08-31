@@ -4,160 +4,179 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Junk Removal Pricing | Thryve Group LLLP</title>
+  <meta name="description" content="Fair, affordable, transparent junk removal pricing for Charlotte, NC and surrounding counties. Load-based and item-specific prices with no hidden fees." />
   <style>
-    body{margin:0;font-family:Inter,Arial,sans-serif;background:#fafafa;color:#111}
+    :root{--tg-gold:#f5c400;--tg-black:#111;--tg-gray:#6b7280;--border:#e5e7eb}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111;background:#fafafa}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    header.hero{background:#fff;border-bottom:1px solid #e5e7eb;padding:20px}
-    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#6b7280;font-size:.78rem}
-    h1{font-size:2rem;margin:.25rem 0 0 0;line-height:1.15}
-    .tagline{margin:.5rem 0 0 0;color:#111;font-weight:600}
-    .badges{display:flex;flex-wrap:wrap:wrap;gap:8px;margin-top:12px}
-    .badge{border:1px dashed #111;padding:6px 10px;border-radius:999px;font-size:.85rem;background:#fff}
-   
-    nav ul{list-style:none;display:flex;gap:24px;margin:20px 0 0 0;padding:0;justify-content:center}
-    nav a{text-decoration:none;font-weight:600;color:#111;padding:6px 10px;border-radius:8px;transition:all .2s}
-    nav a:hover{background:#f5c400;color:#111}
-    nav a.active{background:#111;color:#fff}
 
+    header.hero{background:#fff;border-bottom:1px solid var(--border)}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--tg-gray);font-size:.78rem}
+    h1{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:.25rem 0 0;line-height:1.15}
+    .tagline{margin:.5rem 0 0 0;color:#111;font-weight:600}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .badge{border:1px dashed #111;padding:6px 10px;border-radius:999px;font-size:.85rem;background:#fff}
+
+
+
+    section{margin-top:36px}
+    h2{font-size:1.25rem;margin:0 0 10px}
+    p{margin:0 0 12px;color:#1f2937}
     .grid{display:grid;gap:16px}
     @media (min-width:640px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
-    @media (mind-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    @media (min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
     .card h3{margin:0 0 8px 0;font-size:1.1rem}
+    .muted{color:var(--tg-gray);font-size:.95rem}
+
+    .meter{height:10px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:10px 0 12px;border:1px solid var(--border);position:relative;z-index:0}
+    .meter>span{display:block;height:100%;background:linear-gradient(90deg,var(--tg-gold),#ffd84d)!important;width:0}
     .price{display:block;font-size:1.35rem;font-weight:700;margin:0;position:relative;z-index:1}
-    .muted{color:#6b7280;font-size:.95rem}
-    .meter{height:10px;background:#f3f4f6;border-radius:999px;overflow:hidden;margin:10px 0 12px;border:1px solid #e5e7eb;position:relative;z-index:0}
-    .meter > span{display:block;height:100%;background:linear-gradient(90deg,#f5c400,#ffd84d;width:0;}
+
+    .card a{color:inherit;text-decoration:none}
+    .card a:hover{text-decoration:none}
+    .card a:visited{color:inherit}
+
+    table{width:100%;border-collaspe:separate;border-spacing:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff}
+    th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--border)}
+    th{background:#f9fafb;font-weight:700}
+    tr:last-child td{border-bottom:none}
+
     footer{margin:36px 0;text-align:center;color:#6b7280;font-size:.9rem}
-   </style>
+  </style>
 </head>
 <body>
   <header class="hero">
     <div class="container">
-      <div class="eyebrow">Junk Removal Pricing - Thryve Group LLLP</div>
+      <div class="eyebrow">JUNK REMOVAL PRICING - THRYVE GROUP LLLP</div>
       <h1>Fair * Affordable * Transparent</h1>
       <p class="tagline">At Thryve Group LLLP, we believe in making junk removal simple and affordable for Charlotte, NC. Our prices are set lower than the big-name competitors while still giving you professional, reliable service. No hidden fees, no surprises - just honest work at the best value in town.</p>
-      <div class="badges">
+      <div class="badges" aria-hidden="true">
 	<span class="badge">Licensed & Insured</span>
 	<span class="badge">Charlotte * Mecklenburg * Gaston * Cabarrus</span>
 	<span class="badge">Same/Next-Day Service</span>
-      </div>
+    </div>
 
-      <nav>
-          <li><a href="index.html">Home</a></li>
-	  <li><a href="about.html">About</a></li>
-	  <li><a href="services.html">Services</a></li>
-	  <li><a href="pricing.html" class="active">>Pricing</a></li>
-	  <li><a href="contact.html">Contact</a></li>
-	  <li class=\"nav-cta\"><a href=\"https:\/\/junk.thryvegroup.biz\"btn-cta\">Get a Quote<\/a><\/li>
-	<\/ul>
-      </nav>
 
-   </div>
- </header>
+    <nav>
+      <ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="services.html">Services</a></li>
+	<li><a href="portfolio.html">Portfolio</a></li>
+	<li><a href="testimonials.html">Testimonials</a></li>
+	<li><a href="contact.html">Contact</a></li>
+	<li><a href="pricing.html">Pricing</a></li>
+	<li><a href="https://junk.thryvegroup.biz/form.html" class=nav-cta">Get a Quote</a></li>
+      </ul>
+    </nav>
 
- <main class="container">
-   <section id="load-based">
-     <h2>Load-Based Pricing</h2>
-     <p class="disclaimer">Prices include labor, hauling, and responsible disposal. We recycle and donate whenever possible.</p>
-     <div class="grid cols-2 cols-3" role="list" aria-label="Load sizes and prices">
-       <article class="card" role="listitem">
-	 <h3>1/8 Trailer * ~2.2 cu yd</h3>
-	 <div class="meter" aria-hidden="true"><span style="width:12.5%"></span></div>
-         <div class="price">$95</div>
-	 <p class="muted">Good for a few items or small closet cleanout.</p>
-       </article>
+    <div style="text-align: center;">
+      <img src="images/logo.png" alt="Company Logo" style="max-width: 200px; margin:20px 0; height: auto;" />
+    </div>
+  </div>
+</header>
 
-       <article class="card">
-	 <h3>1/4 Trailer * ~4-4.5 cu yd</h3>
-	 <div class="meter"><span style="width:25%"></span></div>
-	 <div class="price">$155</div>
-	 <p class="muted">Great for small furniture or a few bulky items.</p>
-       </article>
+<main class="container">
+  <section id="load-based">
+    <h2>Load-Based Pricing</h2>
+    <p class="muted">Prices include labor, hauling, and responsible disposal. We recycle and donate whenever possible.</p>
+    <div class="grid cols-2 cols-3" role="list" aria-label="Load sizes and prices">
+      <article class="card" role="listitem">
+	<h3>1/8 Trailer * ~2.2 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:12.5%"></span></div>
+	<div class="price">$95</div>
+	<p class="muted">Good for a few items or small closet cleanout.</p>
+      </article>
+      <article class="card" role="listitem">
+	<h3>1/4 Trailer * ~4-4.5 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:25%"></span></div>
+	<div class="price">$155</div>
+	<p class="muted">Great for small furniture or a few bulky items.</p>
+      </article>
+      <article class="card" role="listitem">
+	<h3>3/8 Trailer * ~6-6.6 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:37.5%"></span></div>
+	<div class="price">$230</div>
+	<p class="muted">Good for apartment-size cleanouts.</p>
+      </article>
+      <article class="card" role="listitem">
+	<h3>1/2 Trailer * ~8-9 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:50%"></span></div>
+	<div class="price">$300</div>
+	<p class="muted">Perfect for room cleanouts or renovation debris.</p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>5/8 Trailer * ~11 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:62.5%"></span></div>
+	<div class="price">$380</div>
+	<p class="muted">Multiple bulky items or mid-sized projects.</p>
+      </article>
+      <article class="card" role="listitem">
+	<h3>3/4 Trailer * ~13 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:75%"></span></div>
+	<div class="price">$475</div>
+	<p class="muted">Garage or attic cleanouts.</p>
+      </article>
+      <article class="card" role="listitem">
+	<h3>Full Trailer * ~17 cu yd</h3>
+	<div class="meter" aria-hidden="true"><span style="width:100%"></span></div>
+	<div class="price">$565</div>
+	<p class="muted">Whole-home or yard overhaul projects.</p>
+      </article>
+    </div>
+  </section>
 
-       <article class="card">
-	 <h3>3/8 Trailer * ~6-6.6 cu yd</h3>
-	 <div class="meter"><span style="width:37.5%"></span></div>
-	 <div class="price">$230</div>
-	 <p class="muted">Good for apartment-size cleanouts.</p>
-       </article>
+  <section id="items">>
+    <h2>Item-Specific Pricing</h2>
+    <p class="muted">Perfect for smalljobs and single-item pickups.</p>
+    <ul>
+      <li>Appliances (washer, dryer, fridge, etc.): $90-$140</li>
+      <li>Mattresses & Box Springs: $90-$140</li>
+      <li>Small Furniture (chairs, nightstands, etc.): $90-$130</li>
+      <li>Electronics / E-Waste: $25-$180</li>
+      <li>Construction Debris: $200-$600+ (weight-based pricing available)</li>
+    </ul>
+  </section>
 
-       <article class="card">
-	 <h3>1/2 Trailer * ~8-9 cu yd</h3>
-	 <div class="meter"><span style="width:50%"></span></div>
-	 <p class="muted">Perfect for room cleanouts or renovation debris.</p>
-       </article>
+  <section id="fees">
+    <h2>Available Fee (If Applicable)</h2>
+    <p class="muted">We keep things fair and straightforward - but some jobs take extra time or labor.</p>
+    <ul>
+      <li>Extra: $30 per half-hour</li>
+      <li>Main Floor (inside pickup): +$15</li>
+      <li>1 Flight: +$30</li>
+      <li>2 Flights: +$50</li>
+      <li>3+ Flights: +$70</li>
+    </ul>
+  </section>
 
-       <article class="card">
-	 <h3>5/8 Trailer * ~11 cu yd</h3>
-	 <div class="meter"><span style="width:62.5%"></span></div>
-	 <div class="price">$380</div>
-	 <p class="muted">Multiple bulky items or mid-sized projects.</p>
+  <section id="why">
+    <h2>Why Choose Thryve Group?</h2>
+    <ul>
+      <li>Prices lower than the big junk removal companies in Charlotte</li>
+      <li>Local, community-driven business - we care about our neighbors</li>
+      <li>Eco-friendly: donation + recycling first, landfill last</li>
+      <li>Professional crews, fully insured</li>
+      <li>Fast, flexible scheduling - same-day service available</li>
+    </ul>
+  </section>
 
-       <article class="card">
-	 <h3>3/4 Trailer * ~13 cu yd</h3>
-	 <div class="meter"><span style="width:75%"></span></div>
-	 <div class="price">$475</div>
-	 <p class="muted">Garage or attic cleanouts.</p>
-       </article>
+  <section id="cta2">
+    <h2>Ready to Clear Your Junk?</h2>
+    <p>Don't overpay for junk removal. Book with Thryve Group LLLP today and get it done right - for less.</p>
+    <p><strong>Call us at (866) 847-9832</strong><br>
+    Or Complete the form to request a quote at <a href="https://junk.thryvegroup.biz" target="_blank" rel="noopener">https://junk.thryvegroup.biz</a></p>
+  </section>
+</main>
 
-       <article class="card">
-	 <h3>Full Trailer * ~17 cu yd</h3>
-	 <div class="meter"><span style="width:100%"></span></div>
-       </article>
-     </div>
-   </section>
-
-   <section id="items">
-     <h2>Item-Specific Pricing</h2>
-     <p>Perfect for small jobs and single-items pickups.</p>
-     <ul>
-       <li>Appliances (washer, dryer, fridge, etc.): $90-$140</li>
-       <li>Mattresses & Boxes Springs:$90 - $140</li>
-       <li>Small Furniture (chairs, nightstands, etc.): $90-$130</li>
-       <li>Electronics/E-Waste: $25-$180</li>
-       <li>Construction Debris: $200 - $600+ (weight-based pricing available)</li>
-     </ul>
-   </section>
-
-   <section id="fees">
-     <h2>Available Fee (If Applicable)</h2>
-     <p>We keep things fair and straightforward - but some jobs take extra time or labor.</p>
-     <ul>
-       <li>Extra: $30 per half-hour</li>
-       <li>Main Floor (inside pickup): +$15</li>
-       <li>1 Flight: +$30</li>
-       <li>2 Flights: +$50</li>
-       <li>3+ Flights: +$70</li>
-     </ul>
-   </section>
-
-   <section id="why">
-     <h2>Why Choose Thryve Group?</h2>
-     <ul>
-       <li>Prices lower than the big junk removal companies in Charlotte</li>
-       <li>Local, community-driven business - we care about our neighbors</li>
-       <li>Eco-friendly: donation + recycling first, landfill last</li>
-       <li>Professional crews, fully insured</li>
-       <li>Fast, flexible scheduling - same-day service available</li>
-     </ul>
-   </section>
-
-   <section id="cta2">
-     <h2>Ready to Clear Your Junk?</h2>
-     <p>Don't overpay for junk removal. Book with Thryve Group LLLP today and get it right - for less.</p>
-     <p><strong>Call us at (866) 847-9832</strong><br>
-     Or complete the form to request a quote at <a href="https://junk.thryvegroup.biz">https://junk.thryvegroup.biz</a></p>
-   </section>
-
-   <footer>
-     &copy; <span id="year"></span> Thryve Group LLLP * 9805 Statesville Rd., Suite 6307, Charlotte, NC 28269 * thryvegroup.biz
-   </footer>
- </main>
+<footer>
+  &copy; <span id="year"></span> Thryve Group LLLP * 9805 Statesville Rd., Suite 6307, Charlotte, NC 28269 * thryvegroup.biz
+</footer>
 
  <script>
    document.getElementById('year').textContent = new Date().getFullYear();
  </script>
 </body>
-</htm>
-
+</html>
