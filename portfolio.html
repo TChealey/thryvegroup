@@ -52,7 +52,13 @@
 </body>
 
 <footer style="text-align: center; padding: 1em 0; background-color: #000; color: gold; font-size: 0.9em;">
-  &copy; 2025 Thryve Group LLLP. All rights reserved.
+	&copy; <span id="year"></span>  Thryve Group LLLP. All rights reserved.
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date ().getFullYear();
+</script>
+
+</main>
 </html>
 
